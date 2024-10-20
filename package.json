@@ -1,0 +1,25 @@
+{
+  "name": "solidrock-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev-localhost": "vue-tsc && vite --mode localhost",
+    "build-localhost": "vue-tsc && vite build --mode localhost"
+  },
+  "dependencies": {
+    "@vueuse/core": "^11.1.0",
+    "add": "^2.0.6",
+    "ant-design-vue": "4.x",
+    "pinia": "^2.2.4",
+    "vue": "^3.5.10",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^5.5.3",
+    "unocss": "^0.63.4",
+    "vite": "^5.4.8",
+    "vue-tsc": "^2.1.6"
+  }
+}

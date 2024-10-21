@@ -1,5 +1,5 @@
 <template>
-  <h1>import HelloWorld from './components/HelloWorld.vue'</h1>
+<router-view />
 </template>
 
 <script setup lang="ts">

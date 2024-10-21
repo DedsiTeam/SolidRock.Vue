@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@types/node':
+    specifier: ^22.7.7
+    version: 22.7.7
   '@vueuse/core':
     specifier: ^11.1.0
     version: 11.1.0(vue@3.5.12)
@@ -21,7 +24,7 @@ dependencies:
     specifier: ^3.5.10
     version: 3.5.12(typescript@5.6.3)
   vue-router:
-    specifier: '4'
+    specifier: ^4.4.5
     version: 4.4.5(vue@3.5.12)
 
 devDependencies:
@@ -36,7 +39,7 @@ devDependencies:
     version: 0.63.4(postcss@8.4.47)(vite@5.4.9)
   vite:
     specifier: ^5.4.8
-    version: 5.4.9
+    version: 5.4.9(@types/node@22.7.7)
   vue-tsc:
     specifier: ^2.1.6
     version: 2.1.6(typescript@5.6.3)
@@ -761,6 +764,11 @@ packages:
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
     dev: true
 
+  /@types/node@22.7.7:
+    resolution: {integrity: sha512-SRxCrrg9CL/y54aiMCG3edPKdprgMVGDXjA3gB8UmmBW5TcXzRUYAh8EWzTnSJFAd1rgImPELza+A3bJ+qxz8Q==}
+    dependencies:
+      undici-types: 6.19.8
+
   /@types/web-bluetooth@0.0.20:
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
     dev: false
@@ -776,7 +784,7 @@ packages:
       '@unocss/core': 0.63.4
       '@unocss/reset': 0.63.4
       '@unocss/vite': 0.63.4(vite@5.4.9)
-      vite: 5.4.9
+      vite: 5.4.9(@types/node@22.7.7)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -962,7 +970,7 @@ packages:
       chokidar: 3.6.0
       magic-string: 0.30.12
       tinyglobby: 0.2.9
-      vite: 5.4.9
+      vite: 5.4.9(@types/node@22.7.7)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -975,7 +983,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.4.9
+      vite: 5.4.9(@types/node@22.7.7)
       vue: 3.5.12(typescript@5.6.3)
     dev: true
 
@@ -1781,6 +1789,9 @@ packages:
       - supports-color
     dev: true
 
+  /undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
   /unocss@0.63.4(postcss@8.4.47)(vite@5.4.9):
     resolution: {integrity: sha512-MQ/ktuJ2MoXBsd117DEONFubJRQN6Og4mQJLbT+0nna2aTW4jYJESJ479mJYWq/ajonxEaM+zrf8M92VIWxzEw==}
     engines: {node: '>=14'}
@@ -1810,14 +1821,14 @@ packages:
       '@unocss/transformer-directives': 0.63.4
       '@unocss/transformer-variant-group': 0.63.4
       '@unocss/vite': 0.63.4(vite@5.4.9)
-      vite: 5.4.9
+      vite: 5.4.9(@types/node@22.7.7)
     transitivePeerDependencies:
       - postcss
       - rollup
       - supports-color
     dev: true
 
-  /vite@5.4.9:
+  /vite@5.4.9(@types/node@22.7.7):
     resolution: {integrity: sha512-20OVpJHh0PAM0oSOELa5GaZNWeDjcAvQjGXy2Uyr+Tp+/D2/Hdz6NLgpJLsarPTA2QJ6v8mX2P1ZfbsSKvdMkg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -1848,6 +1859,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 22.7.7
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.0

@@ -1,0 +1,38 @@
+section#layout-section{
+    width: 100dvw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #EFF1F5;
+}
+
+section#layout-header-section{
+    width: 100dvw;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+}
+
+
+section#layout-body-section{
+    width: 100dvw;
+    height: calc(100dvh - 60px);
+    display: flex;
+}
+
+section#layout-body-section > section {
+    height: 100%;
+}
+
+
+section#layout-body-left-section {
+    width: 208px;
+    background-color: #001529;
+}
+
+section#layout-body-right-section {
+    flex: auto;
+    padding: 1rem 0 1rem 1rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

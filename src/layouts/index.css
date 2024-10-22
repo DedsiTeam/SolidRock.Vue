@@ -17,16 +17,18 @@ section#layout-body-section{
     width: 100dvw;
     height: calc(100dvh - 60px);
     display: flex;
+
+    overflow: hidden;
 }
 
 section#layout-body-section > section {
     height: 100%;
 }
 
-
 section#layout-body-left-section {
-    width: 208px;
     background-color: #001529;
+    transition: all 0.4s;
+    overflow: hidden;
 }
 
 section#layout-body-right-section {

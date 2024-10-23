@@ -32,8 +32,8 @@ section#layout-body-left-section {
 }
 
 section#layout-body-right-section {
-    flex: auto;
-    padding: 1rem 0 1rem 1rem;
+    flex: 1;
+    padding: 1rem;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;

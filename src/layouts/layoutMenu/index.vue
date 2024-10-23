@@ -1,10 +1,10 @@
 <template>
   <a-menu
-      v-model:openKeys="state.openKeys"
-      v-model:selectedKeys="state.selectedKeys"
       mode="inline"
       theme="dark"
-      :inline-collapsed="state.collapsed"
+      @click="menuClick"
+      v-model:openKeys="menuState.openKeys"
+      v-model:selectedKeys="menuState.selectedKeys"
       :items="menuData"
   ></a-menu>
 </template>
@@ -12,13 +12,20 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import { menuData } from '@/configs/menuData.ts'
+import {useRouter } from 'vue-router'
 
-const state = reactive({
-  collapsed: false,
-  selectedKeys: ['1'],
-  openKeys: ['sub1'],
-  preOpenKeys: ['sub1'],
+const router = useRouter()
+
+const menuState = reactive({
+  selectedKeys: [],
+  openKeys: []
 });
+
+function menuClick({ key }){
+  menuState.selectedKeys = [key]
+
+  router.push({ name: key })
+}
 </script>
 
 <style scoped>
